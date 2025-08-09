@@ -23,7 +23,6 @@ tennis_model/
 │   ├── atp_players.csv           # Player information
 │   └── atp_rankings_*.csv        # Historical rankings
 ├── fast_tennis_processor.py      # Core data processing pipeline
-├── decision_rank.py              # Rankings-only decision tree
 ├── decision_tree.py              # Full decision tree model
 ├── random_forest_tennis.py       # Random Forest implementation (65.7% accuracy)
 ├── xgBoost.py                    # XGBoost with hyperparameter tuning
@@ -113,7 +112,6 @@ X, y, df = processor.run_fast_pipeline(start_year=2000, end_year=2024)
 | **Random Forest** | **65.7%** | 40+ engineered | Best overall performance |
 | XGBoost Ensemble | 64.8% | 25 selected | Hyperparameter optimized |
 | Decision Tree | 65.1% | All features | Strong baseline |
-| Rankings Only | 62.3% | 3 ranking features | Minimal baseline |
 
 ### 🎯 Performance Breakdown
 - **Ranking features**: 70%+ importance (player1_rank, player2_rank, rank_difference)
